@@ -39,8 +39,6 @@ long fun0(long x, long y){
     return a + b;
 }  
 
-//Da un ensambladoraceptable y eleva x a n //haaaaaaaaaaaaaaa muricion
-// Falta ver manera de ver todas las instrucciones en gdb aunque este con -Og
 int misterio(int x,int n){
     if(n == 1)
         return x;
@@ -48,7 +46,7 @@ int misterio(int x,int n){
         return 1;
     int r = misterio(x,n>>1);
     r = r*r;
-    if(n & 1)
+    if(n & 1 != 0)
         r = r*x;
     return r;
 }
