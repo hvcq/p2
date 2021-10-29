@@ -12,20 +12,19 @@
 }*/
 
 int h(unsigned short x) {
-    short a = x>>2;
+    short a = x >> 2;
     short * p = &x;
-    short n = x + 4;
+    short n = a + 4;
     do{
-        a -= 1;
+        *p -= 1;
         n -= 2;
     }while (n > 0);
-    return n*a;
+    return *p*a;
 }
 
 long f(long x, long *ptr) {
     *ptr = x + 1;
     long result = x % (*ptr);
-    
     return result;
 }
 
@@ -55,11 +54,16 @@ int g(int x, int arr[],int i){
     int sum = x;
     sum+= arr[i];
     return sum; 
-    
 }
 
 int main(){
-    int awa = misterio(5,10);
-    printf("%d\n",awa);
+    /*int awa = 0;
+    scanf("%d\n",&awa);
+    if(awa){
+        printf("if\n");
+    }else{
+        printf("else\n");
+    }
     return 0;
+    */
 }
